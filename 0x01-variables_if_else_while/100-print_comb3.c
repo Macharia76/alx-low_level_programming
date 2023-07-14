@@ -22,8 +22,8 @@ while (a <= '9')
 			}
 			else
 			{
-				putchar('a');
-				putchar('b');
+				putchar(' ');
+				putchar(' ');
 			}
 		}
 
