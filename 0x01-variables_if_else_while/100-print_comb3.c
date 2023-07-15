@@ -5,32 +5,25 @@
  */
 int main(void)
 {
-int a = '0';
-int b = '1';
+int a;
+int b;
 
-while (a <= '9')
+for (a = 0; a < '9'; a++)
 {
-	while (b <= '9')
-	{
-		if (!(a > b) || a == b)
-		{
-			putchar(a);
-			putchar(b);
-			if (a == '8' && b == '9')
-			{
-				putchar('\n');
-			}
-			else
-			{
-				putchar(',');
-				putchar(',');
-			}
-		}
 
-b++;
+for (b = a + 1; b <= '9'; b++)
+{
+if (b != a)
+{
+putchar(a);
+putchar(b);
+if (a == '8' && b == '9')
+continue;
+putchar(',');
+putchar(' ');
 }
-b = '1';
-a++;
 }
+}
+putchar('\n');
 return (0);
 }
