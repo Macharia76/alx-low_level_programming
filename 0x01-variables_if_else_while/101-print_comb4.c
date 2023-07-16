@@ -1,4 +1,6 @@
-#include<stdio.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 /**
  * main - prints all the possible combinations of three numbers
  * Return: 0
@@ -6,24 +8,25 @@
 int main(void)
 {
 int x, y, z;
-for (x = 48, x < 58, x++)
+for (x = '0'; x < '9'; x++)
 {
-for (y = 49, y < 58, y++)
+for (y = x + 1; y <= '9'; y++)
 {
-for (z = 50, z < 58, z++)
+for (z = y + 1; z <= '9'; z++)
 {
-if (z > y && y > x)
+if ((y != x) != z)
 {
 putchar(x);
 putchar(y);
 putchar(z);
-if (x != 55 || y != 56)
-{
+if (x == '7' && y == '8')
+continue;
 putchar(',');
 putchar(' ');
 }
 }
-}}}
-putchar("\n");
+}
+}
+putchar('\n');
 return (0);
 }
