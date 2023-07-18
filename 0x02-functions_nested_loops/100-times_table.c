@@ -8,7 +8,7 @@
 void print_times_table(int k)
 {
 int num, mul, pro;
-if (k >= 0 && k<=15)
+if (k >= 0 && k <= 15)
 {
 for (num = 0; num <= k; num++)
 {
@@ -19,6 +19,8 @@ _putchar(',');
 _putchar(' ');
 pro = num * mul;
 if (pro <= 99)
+_putchar(' ');
+if (pro <= 9)
 _putchar(' ');
 if (pro >= 100)
 {
