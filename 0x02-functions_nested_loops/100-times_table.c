@@ -5,15 +5,15 @@
  * Starting with 0.
  * @n: The value of table to be printed.
  */
-void print_times_table(int k)
+void print_times_table(int n)
 {
 int num, mul, pro;
-if (k >= 0 && k <= 15)
+if (n >= 0 && n <= 15)
 {
-for (num = 0; num <= k; num++)
+for (num = 0; num <= n; num++)
 {
 _putchar('0');
-for (mul = 1; mul <= k; mul++)
+for (mul = 1; mul <= n; mul++)
 {
 _putchar(',');
 _putchar(' ');
