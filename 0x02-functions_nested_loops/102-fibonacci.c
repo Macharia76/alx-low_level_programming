@@ -14,7 +14,7 @@ while (a < 50)
 if (a == 0)
 printf("%ld", j);
 else if (a == 1)
-printf("%ld", k);
+printf(", %ld", k);
 else
 {
 k += j;
