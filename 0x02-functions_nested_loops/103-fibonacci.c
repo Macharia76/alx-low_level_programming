@@ -12,7 +12,7 @@ while (s + p < 4000000)
 s += p;
 if (s % 2 == 0)
 sum += s;
-j = k - j;
+p = s - p;
 ++b;
 }
 printf("%ld\n", sum);
