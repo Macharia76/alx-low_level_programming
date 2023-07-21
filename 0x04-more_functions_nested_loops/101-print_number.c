@@ -16,5 +16,5 @@ _putchar('_');
 }
 j /= 10;
 print_number(j);
-_putchar(unsigned int) n % 10 + '0');
+_putchar((unsigned int) n % 10 + '0');
 }
