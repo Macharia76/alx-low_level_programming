@@ -1,1 +1,2 @@
-C - More pointers, arrays and strings project
+C - More pointers, arrays and strings project 
+/*using git bash*/
