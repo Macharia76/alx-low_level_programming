@@ -2,19 +2,19 @@
 
 /**
  * sum_them_all - It calculates the sum of all its parameters
- * @y:This is the number of arguments passed to the function
+ * @n:This is the number of arguments passed to the function
  *
  * Return: Returns the resulting sum
  */
-int sum_them_all(const unsigned int y, ...)
+int sum_them_all(const unsigned int n, ...)
 {
-	unsigned int i;
+	unsigned int num;
 	int sum = 0;
 	va_list list;
 
-	va_start(list, y);
+	va_start(list, n);
 
-	for (i = 0; i < y; i++)
+	for (num = 0; num < n; num++)
 		sum += va_arg(list, int);
 
 	va_end(list);
