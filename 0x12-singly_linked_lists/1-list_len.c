@@ -1,8 +1,8 @@
 #include "lists.h"
 /**
- * list_len - returns then number of elements in a list.
- * @h: singly linked list.
- * Return: number of elements in a linked list_t list
+ * list_len - This function returns then number of elements in a list.
+ * @h: The singly linked list.
+ * Return: The number of elements or nodes in the list.
  */
 
 size_t list_len(const list_t *h)
