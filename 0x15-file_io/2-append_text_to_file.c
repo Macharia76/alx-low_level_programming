@@ -5,33 +5,30 @@
   * @filename: Name of file and text content is the NULL
   * @text_content: The string  to write to file
   *
-  * Return: 1 on success -1 on failure
+  * Return: 1 on success -1 on failure, NULL
   */
 
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int fd;
-	size_t len = 0;
-	ssize_t check = 0;
+	int op;
+	int len = 0;
+	int wr;
 
 	if (filename == NULL)
 		return (-1);
-
-	/*Find length of content*/
-	while (text_content[len])
-		len++;
-
-	fd = open(filename, O_WRONLY | O_APPEND);
-
-	if (fd == -1)
-		return (-1);
 	if (text_content != NULL)
-		check = write(fd, text_content, len);
+	{
+	for (len = 0; text_content[len];)
+		len++;
+	}
 
-	if (check == -1)
+	op = open(filename, O_WRONLY | O_APPEND);
+	wr = write(op, text_content, len);
+	if (op == -1 || wr == -1)
 		return (-1);
 
-	close(fd);
+	close(op);
+
 	return (1);
 }
 
