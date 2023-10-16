@@ -1,2 +1,2 @@
-Learning C programming language and doing projects using SSH
+Learning C programming language and doing projects via SSH
 
